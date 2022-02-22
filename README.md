@@ -38,6 +38,7 @@ Mobile screenshot
 ### Links
 
 - Solution URL: [advice-generator-app](https://github.com/Axurynn/advice-generator-app)
+- Live solution: [advice-generator-app_live](https://axurynn.github.io/advice-generator-app/)
 
 ## My process
 
