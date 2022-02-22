@@ -1,7 +1,11 @@
 const app = {
   async fetchAdvice() {
-    const advice = await fetch("https://api.adviceslip.com/advice");
+    const advice = await fetch(`https://api.adviceslip.com/advice/${app.randomNumber()}`);
     return await advice.json();
+  },
+
+  randomNumber() {
+    return Math.floor(Math.random() * 224)
   },
 
   async adviceRendering() {
@@ -11,14 +15,10 @@ const app = {
     document.querySelector('.id').innerText = advice.slip.id
   },
 
-  adviceChangeOnClick() {
-    window.location.reload()
-  },
-
   init() {
     app.adviceRendering();
 
-    document.querySelector('.dice').addEventListener("click", () => app.adviceChangeOnClick())
+    document.querySelector('.dice').addEventListener("click", () => app.adviceRendering())
   },
 };
 
