@@ -11,8 +11,8 @@ const app = {
   async adviceRendering() {
     let advice = await app.fetchAdvice()
 
-    document.querySelector('.advice').innerText = advice.slip.advice
-    document.querySelector('.id').innerText = advice.slip.id
+    document.querySelector('.advice').textContent = advice.slip.advice
+    document.querySelector('.id').textContent = advice.slip.id
   },
 
   init() {
